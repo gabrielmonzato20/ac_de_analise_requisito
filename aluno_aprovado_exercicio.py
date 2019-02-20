@@ -19,9 +19,9 @@ def aluno_aprovado(freq,acs,prova=0,sub=0,pai=None,extra=0):
             else:
                 acs[c] = 0
                 print(acs[c])
-    print(acs)
+ 
     acs=sorted(acs,reverse=True)
-    print(acs)
+   
     maior_nota = acs[:7]
     media = sum(maior_nota)/len(maior_nota)
     status['acs'] = maior_nota
@@ -44,7 +44,7 @@ def aluno_aprovado(freq,acs,prova=0,sub=0,pai=None,extra=0):
         status['motivo'].append("nota")
     return status
 
-print(aluno_aprovado(0.9,[0]*3+[10]*7,0,0,None,0))
+
     
 
     
@@ -63,7 +63,6 @@ class TestStringMethods(unittest.TestCase):
      
      def test_02_aluno_aprovado_soh_acs(self):
          resultado = aluno_aprovado(0.9,[0]*3+[10]*7,0,0,None,0)
-         print(resultado)
          self.assertTrue(resultado['aprovado'])
          resultado = aluno_aprovado(0.8,[10]*7+[0]*3,0,0,None,0)
          self.assertTrue(resultado['aprovado'])
